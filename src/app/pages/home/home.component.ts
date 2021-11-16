@@ -1,3 +1,4 @@
+import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  books!: any;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getBooks().subscribe((e) => {
+      this.books = e;
+    });
+
+
   }
 
 }

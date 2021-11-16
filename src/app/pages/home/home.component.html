@@ -2,17 +2,9 @@
 <main>
   <div class="books">
     <ul class="books-list">
-      <li class="books-list__item">
-        <app-cards></app-cards>
+      <li class="books-list__item" *ngFor="let book of books">
+        <app-cards [book]="book"></app-cards>
       </li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
-      <li class="books-list__item"><app-cards></app-cards></li>
     </ul>
   </div>
 </main>
