@@ -1,0 +1,15 @@
+.books {
+  margin-top: 2em;
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.books-list__item {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  padding: 20px;
+}

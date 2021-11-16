@@ -1,0 +1,23 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 250px;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  padding: 0 1em 1em 1em;
+  background-color: #71c4f438;
+}
+
+.book-title {
+  text-align: center;
+}
+.book-card p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.book-card p span {
+  font-weight: 600;
+}
