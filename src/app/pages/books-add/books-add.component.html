@@ -1,0 +1,31 @@
+<h1 class="add-book__title">Add a new book</h1>
+
+<form class="add-book__form" [formGroup]="addBook">
+  <div class="add-book__form-input">
+    <label for="name">Book Name</label>
+    <input
+      type="text"
+      id="name"
+      class="add-book__input"
+      formControlName="bookName"
+    />
+  </div>
+  <div class="add-book__form-input">
+    <label for="price">Book Price</label>
+    <input type="text" id="price" formControlName="price" />
+  </div>
+  <div class="add-book__form-input">
+    <label for="category">Book Category</label>
+    <input
+      type="text"
+      id="category"
+      class="add-book__input"
+      formControlName="category"
+    />
+  </div>
+  <div class="add-book__form-input">
+    <label for="author">Book Author</label>
+    <input type="text" id="author" formControlName="author" />
+  </div>
+  <input type="button" value="Enviar" (click)="sendBook()" />
+</form>

@@ -1,10 +1,9 @@
-import { HomeComponent } from './pages/home/home.component';
-import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent}
+  {path: "", loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)},
+  {path: "add-book", loadChildren: () => import('./pages/books-add/books-add.module').then((m) => m.BooksAddModule)},
 ];
 
 @NgModule({

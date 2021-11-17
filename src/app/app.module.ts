@@ -1,3 +1,6 @@
+import { HeaderModule } from './components/header/header.module';
+import { RouterModule } from '@angular/router';
+import { BooksAddModule } from './pages/books-add/books-add.module';
 import { HomeModule } from './pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    BrowserAnimationsModule,HttpClientModule,
+    RouterModule,
+    BooksAddModule,
+    HeaderModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

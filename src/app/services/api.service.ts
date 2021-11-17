@@ -1,3 +1,4 @@
+import { Book } from './../models/book';
 import { API } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -11,5 +12,10 @@ export class ApiService {
 
   getBooks() {
     return this.http.get(API)
+  }
+
+  addBook(book: Book){
+    this.http.post(API, book).subscribe((e)=> console.log(e)
+    )
   }
 }
