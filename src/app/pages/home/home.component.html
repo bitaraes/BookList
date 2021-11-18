@@ -2,7 +2,17 @@
   <div class="books">
     <ul class="books-list">
       <li class="books-list__item" *ngFor="let book of books">
-        <app-cards [book]="book"></app-cards>
+        <app-cards [book]="book">
+          <div class="book-menu">
+            <p><span>Editar</span></p>
+            <i-bs
+              name="trash"
+              width="20"
+              height="20"
+              (click)="delete(book.id)"
+            ></i-bs>
+          </div>
+        </app-cards>
       </li>
     </ul>
   </div>

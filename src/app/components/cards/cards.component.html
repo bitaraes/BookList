@@ -1,6 +1,7 @@
-<div class="book-card">
+<div class="book-card" id="{{ book?.id }}">
   <h3 class="book-title">{{ book?.bookName }}</h3>
   <p><span>Price:</span> {{ book?.price }}</p>
   <p><span>Category:</span> {{ book?.category }}</p>
   <p><span>Author:</span> {{ book?.author }}</p>
 </div>
+<ng-content></ng-content>

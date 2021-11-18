@@ -18,4 +18,10 @@ export class ApiService {
     this.http.post(API, book).subscribe((e)=> console.log(e)
     )
   }
+
+  deleteBook(id: string) {
+    console.log(id);
+
+    // this.http.delete(API+id)
+  }
 }

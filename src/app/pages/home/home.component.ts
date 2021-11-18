@@ -19,5 +19,7 @@ export class HomeComponent implements OnInit {
 
 
   }
-
+  delete(id: string){
+    this.apiService.deleteBook(id)
+  }
 }
