@@ -13,7 +13,7 @@ import { InvalidFieldMessageComponent } from './components/invalid-field-message
 @NgModule({
   declarations: [
     AppComponent,
-    InvalidFieldMessageComponent
+    InvalidFieldMessageComponent,
   ],
   imports: [
     BrowserModule,

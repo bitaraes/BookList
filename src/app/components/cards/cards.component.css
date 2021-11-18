@@ -21,32 +21,3 @@
 .book-card p span {
   font-weight: 600;
 }
-
-.book-menu {
-  display: flex;
-  width: 100%;
-  background-color: red;
-  margin-bottom: 2em;
-  border-radius: 0 0 1em 1em;
-  overflow: hidden;
-}
-
-.book-menu > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  height: 40px;
-  width: 50%;
-  margin: 0;
-}
-.book-menu > :first-child {
-  border: 1px solid white;
-  border-radius: 0 0 0 1em;
-  background-color: #40728f;
-}
-.book-menu > :last-child {
-  border: 1px solid white;
-  border-radius: 0 0 1.1em 0;
-  background-color: #b82525;
-}

@@ -14,14 +14,19 @@ export class ApiService {
     return this.http.get(API)
   }
 
+  getBook(id: string){
+    return this.http.get(API+id)
+  }
+
   addBook(book: Book){
-    this.http.post(API, book).subscribe((e)=> console.log(e)
-    )
+    return this.http.post(API, book)
   }
 
   deleteBook(id: string) {
-    console.log(id);
+    return this.http.delete(API+id)
+  }
 
-    // this.http.delete(API+id)
+  updateBook(id: string, book: Book){
+    return this.http.put(API + id, book)
   }
 }

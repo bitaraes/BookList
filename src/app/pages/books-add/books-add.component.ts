@@ -2,6 +2,7 @@ import { Book } from './../../models/book';
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-books-add',
@@ -12,7 +13,7 @@ export class BooksAddComponent implements OnInit {
   addBook!: FormGroup;
   book!: Book;
 
-  constructor(private formBuilder: FormBuilder, private apiService: ApiService) { }
+  constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.addBook = this.formBuilder.group({
@@ -25,6 +26,6 @@ export class BooksAddComponent implements OnInit {
 
   sendBook(){
     this.book = this.addBook.value;
-    this.apiService.addBook(this.book)
+    this.apiService.addBook(this.book).subscribe(()=> this.router.navigate(['']))
   }
 }
