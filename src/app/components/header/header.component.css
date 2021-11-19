@@ -19,23 +19,22 @@
   color: #fff;
 }
 
-.navbar-list {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  color: #fff;
-}
-.navbar-list__item a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.navbar-list__item a:hover {
-  text-decoration: underline;
-}
-
 .profile a {
   text-decoration: none;
   color: #fff;
   padding: 15px;
+}
+
+@media screen and (max-width: 545px) {
+  .header {
+    flex-direction: column;
+    height: 120px;
+  }
+  .header > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .search-input {
+    width: 160px;
+  }
 }

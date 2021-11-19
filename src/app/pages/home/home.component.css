@@ -1,8 +1,11 @@
-.books {
-  margin-top: 2em;
+.navbar {
+  padding-top: 1.5em;
+  display: flex;
+  margin-left: 4%;
 }
 
 .books-list {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -10,14 +13,15 @@
 .books-list__item {
   display: flex;
   justify-content: center;
-  width: 20%;
-  padding: 20px;
+  width: 16%;
+  min-width: 220px;
+  margin: 1.5%;
 }
 .book-menu {
   display: flex;
   width: 100%;
   background-color: red;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   border-radius: 0 0 1em 1em;
   overflow: hidden;
 }
@@ -40,4 +44,33 @@
   border: 1px solid white;
   border-radius: 0 0 1.1em 0;
   background-color: #b82525;
+}
+
+@media screen and (max-width: 765px) {
+  .books-list__item {
+    width: 46%;
+  }
+  .navbar {
+    margin-left: 13%;
+  }
+}
+@media screen and (max-width: 545px) {
+  .books-list__item {
+    width: 90%;
+    padding: 0;
+  }
+  .navbar {
+    justify-content: center;
+    padding: 1.5em;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .books-list {
+    padding: 0;
+  }
+  .books-list__item {
+    width: 100%;
+  }
 }

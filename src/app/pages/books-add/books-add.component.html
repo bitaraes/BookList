@@ -1,31 +1,47 @@
 <h1 class="add-book__title">Add a new book</h1>
 
 <form class="add-book__form" [formGroup]="addBook">
-  <div class="add-book__form-input">
-    <label for="name">Book Name</label>
+  <div class="add-book__input-container">
     <input
       type="text"
       id="name"
       class="add-book__input"
       formControlName="bookName"
+      placeholder="Book Name"
     />
+    <label for="name">Book Name</label>
   </div>
-  <div class="add-book__form-input">
+  <div class="add-book__input-container">
+    <input
+      type="text"
+      id="price"
+      class="add-book__input"
+      formControlName="price"
+      placeholder="Book Price"
+    />
     <label for="price">Book Price</label>
-    <input type="text" id="price" formControlName="price" />
   </div>
-  <div class="add-book__form-input">
-    <label for="category">Book Category</label>
+  <div class="add-book__input-container">
     <input
       type="text"
       id="category"
       class="add-book__input"
       formControlName="category"
+      placeholder="Book Category"
     />
+    <label for="category">Book Category</label>
   </div>
-  <div class="add-book__form-input">
+  <div class="add-book__input-container">
+    <input
+      type="text"
+      id="author"
+      class="add-book__input"
+      formControlName="author"
+      placeholder="Book Author"
+    />
     <label for="author">Book Author</label>
-    <input type="text" id="author" formControlName="author" />
   </div>
-  <input type="button" value="Enviar" (click)="sendBook()" />
+  <div class="send-book">
+    <button (click)="sendBook()" class="send-book__button">Enviar</button>
+  </div>
 </form>

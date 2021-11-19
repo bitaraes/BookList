@@ -21,3 +21,8 @@
 .book-card p span {
   font-weight: 600;
 }
+@media screen and (max-width: 320px) {
+  .book-card {
+    width: 200px;
+  }
+}

@@ -1,5 +1,21 @@
 <main>
   <div class="books">
+    <nav>
+      <div class="navbar">
+        <select class="navbar-list">
+          <option class="navbar-list__item" selected="true" disabled="disabled">
+            <a href="#">Categoria</a>
+          </option>
+          <option class="navbar-list__item">Policial</option>
+          <option class="navbar-list__item">Novela</option>
+          <option class="navbar-list__item">História</option>
+          <option class="navbar-list__item">Ficção</option>
+          <option class="navbar-list__item">Fantasia</option>
+          <option class="navbar-list__item">Romance</option>
+          <option class="navbar-list__item">Outros</option>
+        </select>
+      </div>
+    </nav>
     <ul class="books-list">
       <li class="books-list__item" *ngFor="let book of books">
         <app-cards [book]="book">
