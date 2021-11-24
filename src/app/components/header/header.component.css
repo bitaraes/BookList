@@ -25,6 +25,10 @@
   padding: 15px;
 }
 
+#logout-button {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 545px) {
   .header {
     flex-direction: column;

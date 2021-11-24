@@ -5,24 +5,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   books!: any;
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.apiService.getBooks().subscribe((e) => {
       this.books = e;
     });
   }
-  delete(id: string){
-    this.apiService.deleteBook(id).subscribe(()=> window.location.reload())
+  delete(id: string) {
+    this.apiService.deleteBook(id).subscribe(() => window.location.reload());
   }
-  edit(id: string){
+  edit(id: string) {
     console.log(id);
-    this.router.navigate(['/edit-book', id])
-  };
+    this.router.navigate(['/home/edit-book', id]);
+  }
 }

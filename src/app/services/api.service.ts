@@ -1,32 +1,62 @@
+import { TokenService } from './token.service';
+import { User } from './../models/user';
 import { Book } from './../models/book';
 import { API } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private tokenService: TokenService) {}
 
   getBooks() {
-    return this.http.get(API)
+    const resource = 'books/';
+    const url = API + resource;
+    return this.http.get(url);
   }
 
-  getBook(id: string){
-    return this.http.get(API+id)
+  getBook(id: string) {
+    const resource = 'books/';
+    const url = API + resource + id;
+    return this.http.get(url);
   }
 
-  addBook(book: Book){
-    return this.http.post(API, book)
+  addBook(book: Book) {
+    const resource = 'books/';
+    const url = API + resource;
+    return this.http.post(url, book, {
+      headers: { Authorization: `Bearer ${this.tokenService.getToken()}` },
+    });
   }
 
   deleteBook(id: string) {
-    return this.http.delete(API+id)
+    const resource = 'books/';
+    const url = API + resource + id;
+    return this.http.delete(url, {
+      headers: { Authorization: `Bearer ${this.tokenService.getToken()}` },
+    });
   }
 
-  updateBook(id: string, book: Book){
-    return this.http.put(API + id, book)
+  updateBook(id: string, book: Book) {
+    const resource = 'books/';
+    const url = API + resource + id;
+    return this.http.put(url, book, {
+      headers: { Authorization: `Bearer ${this.tokenService.getToken()}` },
+    });
+  }
+
+  login(user: User) {
+    const resource = 'login/';
+    const url = API + resource;
+    return this.http.post(
+      url,
+      { login: user.login, password: user.password },
+      {
+        headers: { 'Content-Type': 'Application/Json' },
+        observe: 'response',
+      }
+    );
   }
 }

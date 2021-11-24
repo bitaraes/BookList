@@ -1,0 +1,32 @@
+<h1 class="add-book__title">Login</h1>
+
+<form class="login__form" [formGroup]="loginForm">
+  <div class="login__input-container">
+    <input
+      type="text"
+      id="userName"
+      class="login__input"
+      formControlName="login"
+      placeholder="Username"
+    />
+    <label for="userName">Username</label>
+  </div>
+  <div class="login__input-container">
+    <input
+      type="password"
+      id="password"
+      class="login__input"
+      formControlName="password"
+      placeholder="Password"
+    />
+    <label for="password">Password</label>
+  </div>
+  <div class="login">
+    <p>
+      Não tem conta?
+      <a routerLink="/register" class="login__link"> Cadastre-se </a>
+    </p>
+
+    <button (click)="login()" class="login__button">Signin</button>
+  </div>
+</form>

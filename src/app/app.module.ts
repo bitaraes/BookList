@@ -11,21 +11,16 @@ import { AppComponent } from './app.component';
 import { InvalidFieldMessageComponent } from './components/invalid-field-message/invalid-field-message.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InvalidFieldMessageComponent,
-  ],
+  declarations: [AppComponent, InvalidFieldMessageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     RouterModule,
     BooksAddModule,
-    HeaderModule,
     HttpClientModule,
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

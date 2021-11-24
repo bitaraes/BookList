@@ -8,7 +8,12 @@
     placeholder="Find for your book"
   />
   <div class="profile">
-    <a routerLink="/">HOME</a>
-    <a routerLink="/add-book">ADD BOOK</a>
+    <a routerLink="/home">HOME</a>
+    <a routerLink="/home/add-book">ADD BOOK</a>
+    <a routerLink="/" *ngIf="!isLogged; else logout">LOGIN</a>
   </div>
 </header>
+
+<ng-template #logout
+  ><a id="logout-button" (click)="logoff()">LOGOFF</a></ng-template
+>
