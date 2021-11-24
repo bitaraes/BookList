@@ -1,6 +1,6 @@
 <h1 class="add-book__title">Signup</h1>
 
-<form class="login__form">
+<form class="login__form" [formGroup]="registerForm">
   <div class="login__input-container">
     <input
       type="text"
@@ -22,6 +22,6 @@
     <label for="password">Password</label>
   </div>
   <div class="login">
-    <button class="login__button">Signup</button>
+    <button class="login__button" (click)="register()">Signup</button>
   </div>
 </form>

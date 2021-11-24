@@ -50,13 +50,17 @@ export class ApiService {
   login(user: User) {
     const resource = 'login/';
     const url = API + resource;
-    return this.http.post(
-      url,
-      { login: user.login, password: user.password },
-      {
-        headers: { 'Content-Type': 'Application/Json' },
-        observe: 'response',
-      }
-    );
+    return this.http.post(url, user, {
+      headers: { 'Content-Type': 'Application/Json' },
+      observe: 'response',
+    });
+  }
+  register(user: User) {
+    const resource = 'register/';
+    const url = API + resource;
+    return this.http.post(url, user, {
+      headers: { 'Content-Type': 'Application/Json' },
+      observe: 'response',
+    });
   }
 }
