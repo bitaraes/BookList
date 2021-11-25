@@ -35,7 +35,10 @@ export class ApiService {
     const resource = 'books/';
     const url = API + resource + id;
     return this.http.delete(url, {
-      headers: { Authorization: `Bearer ${this.tokenService.getToken()}` },
+      headers: {
+        Authorization: `Bearer ${this.tokenService.getToken()}`,
+        observe: 'response',
+      },
     });
   }
 

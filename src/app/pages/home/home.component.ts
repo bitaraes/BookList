@@ -1,6 +1,7 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,16 @@ export class HomeComponent implements OnInit {
     });
   }
   delete(id: string) {
-    this.apiService.deleteBook(id).subscribe(() => window.location.reload());
+    this.books = this.books.filter((current: any) => {
+      return current.id != id;
+    });
+    this.apiService.deleteBook(id).subscribe((res: any) => {
+      if (res.status == 200) {
+        this.books = this.books.filter((current: any) => {
+          return current.id != id;
+        });
+      }
+    });
   }
   edit(id: string) {
     console.log(id);
