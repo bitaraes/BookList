@@ -2,15 +2,16 @@
   <div class="books">
     <nav>
       <div class="navbar">
-        <select class="navbar-list">
+        <select class="navbar-list" (change)="search($event?.target)">
           <option class="navbar-list__item" selected="true" disabled="disabled">
             <a href="#">Categoria</a>
           </option>
-          <option class="navbar-list__item">Policial</option>
-          <option class="navbar-list__item">Novela</option>
-          <option class="navbar-list__item">História</option>
-          <option class="navbar-list__item">Ficção</option>
+          <option class="navbar-list__item">Todos</option>
           <option class="navbar-list__item">Fantasia</option>
+          <option class="navbar-list__item">Ficção</option>
+          <option class="navbar-list__item">História</option>
+          <option class="navbar-list__item">Novela</option>
+          <option class="navbar-list__item">Policial</option>
           <option class="navbar-list__item">Romance</option>
           <option class="navbar-list__item">Outros</option>
         </select>

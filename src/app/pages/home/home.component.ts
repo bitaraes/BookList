@@ -1,7 +1,6 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +9,32 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   books!: any;
+  allBooks!: any;
 
   constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.apiService.getBooks().subscribe((e) => {
-      this.books = e;
+      this.allBooks = e;
+      this.books = this.allBooks;
     });
   }
+  search(searchFilter: any) {
+    searchFilter = searchFilter.value;
+    if (searchFilter == 'Todos') {
+      this.books = this.allBooks;
+      return;
+    }
+
+    this.books = this.allBooks.filter((current: any) => {
+      return Object.values(current)
+        .toString()
+        .toLowerCase()
+        .includes(searchFilter.toString().toLowerCase());
+    });
+    console.log(this.books);
+  }
+
   delete(id: string) {
     this.books = this.books.filter((current: any) => {
       return current.id != id;
