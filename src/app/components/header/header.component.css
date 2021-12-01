@@ -8,15 +8,27 @@
   padding-inline: 1em;
 }
 
-.search-input {
+.search-box {
+  display: flex;
+  align-items: center;
   width: 30%;
   height: 33px;
-  border-radius: 4px;
+}
+
+.search-input {
+  height: 33px;
+  border-radius: 4px 0 0 4px;
   background-color: #373737;
   outline: none;
   border: none;
   padding: 0 15px;
   color: #fff;
+}
+
+.search-button {
+  border-radius: 0 4px 4px 0;
+  border: none;
+  height: 33px;
 }
 
 .profile a {

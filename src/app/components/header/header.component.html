@@ -1,12 +1,19 @@
 <header class="header">
   <span><img src="../../../assets/img/logo-frwk.svg" class="logo" /></span>
-  <input
-    type="search"
-    name="search-book"
-    id="search-book"
-    class="search-input"
-    placeholder="Find for your book"
-  />
+  <div class="search-box">
+    <input
+      type="search"
+      name="search-book"
+      id="search-book"
+      class="search-input"
+      placeholder="Find for your book"
+      #searchBox
+      (input)="searchHandler(searchBox.value)"
+    /><button class="search-button">
+      <i-bs name="search" width="20" height="20"></i-bs>
+    </button>
+  </div>
+
   <div class="profile">
     <a routerLink="/home">HOME</a>
     <a routerLink="/home/add-book">ADD BOOK</a>

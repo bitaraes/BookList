@@ -59,7 +59,7 @@ export class ApiService {
     });
   }
   register(user: User) {
-    const resource = 'register/';
+    const resource = 'create/';
     const url = API + resource;
     return this.http.post(url, user, {
       headers: { 'Content-Type': 'Application/Json' },

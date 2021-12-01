@@ -1,4 +1,3 @@
-import { HeaderModule } from './components/header/header.module';
 import { RouterModule } from '@angular/router';
 import { BooksAddModule } from './pages/books-add/books-add.module';
 import { HomeModule } from './pages/home/home.module';

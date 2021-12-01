@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { TokenService } from './../../services/token.service';
 import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { EmittersService } from 'src/app/services/emitters.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,11 @@ export class HeaderComponent implements OnInit, AfterContentInit {
   isLogged: boolean = false;
   subscription!: Subscription;
   numero: number = 0;
-  constructor(private tokenService: TokenService, private router: Router) {
+  constructor(
+    private tokenService: TokenService,
+    private router: Router,
+    private emitterService: EmittersService
+  ) {
     this.subscription = this.tokenService
       .isLogged()
       .subscribe((logged) => (this.isLogged = logged));
@@ -21,6 +26,10 @@ export class HeaderComponent implements OnInit, AfterContentInit {
   ngOnInit(): void {}
 
   ngAfterContentInit() {}
+
+  searchHandler(searchEvent: string) {
+    this.emitterService.emitChange(searchEvent);
+  }
 
   logoff() {
     this.tokenService.logout();

@@ -2,7 +2,11 @@
   <div class="books">
     <nav>
       <div class="navbar">
-        <select class="navbar-list" (change)="search($event?.target)">
+        <select
+          class="navbar-list"
+          (change)="search(searchFilter.value)"
+          #searchFilter
+        >
           <option class="navbar-list__item" selected="true" disabled="disabled">
             <a href="#">Categoria</a>
           </option>
@@ -32,5 +36,6 @@
         </app-cards>
       </li>
     </ul>
+    <button *ngIf="seeAll == true">Ver todos</button>
   </div>
 </main>
