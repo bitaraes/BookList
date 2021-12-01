@@ -1,4 +1,4 @@
-<h1 class="add-book__title">Signup</h1>
+<h1 class="add-book__title">Register</h1>
 
 <form class="login__form" [formGroup]="registerForm">
   <div class="login__input-container">
@@ -22,6 +22,10 @@
     <label for="password">Password</label>
   </div>
   <div class="login">
+    <p>
+      Already have an account?
+      <a routerLink="" class="login__link"> Sign in. </a>
+    </p>
     <button class="login__button" (click)="register()">Signup</button>
   </div>
 </form>

@@ -62,7 +62,6 @@ export class HomeComponent implements OnInit {
     });
   }
   edit(id: string) {
-    console.log(id);
     this.router.navigate(['/home/edit-book', id]);
   }
 }

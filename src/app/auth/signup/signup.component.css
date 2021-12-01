@@ -75,7 +75,7 @@ select:-webkit-autofill:focus {
 
 .login {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .login__button {
   margin-top: 1em;
@@ -93,4 +93,19 @@ select:-webkit-autofill:focus {
   transform: scale(1.1);
   background-color: #fff;
   box-shadow: 0px 0px 5px 1px #e0e0e0;
+}
+.login__link {
+  text-decoration: underline;
+  color: #fff;
+  font-size: 16px;
+  transition: transform 0.5s;
+}
+.login__link:hover {
+  transform: scale(1.1);
+}
+.login p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
 }
