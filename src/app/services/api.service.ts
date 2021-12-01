@@ -51,6 +51,8 @@ export class ApiService {
   }
 
   login(user: User) {
+    console.log(user);
+
     const resource = 'login/';
     const url = API + resource;
     return this.http.post(url, user, {
