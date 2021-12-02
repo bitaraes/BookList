@@ -37,7 +37,7 @@
       </li>
     </ul>
     <div *ngIf="seeAll == true" class="book-list__see-all">
-      <button class="see-all__button">All Books</button>
+      <button class="see-all__button" (click)="search('')">All Books</button>
     </div>
   </div>
 </main>
