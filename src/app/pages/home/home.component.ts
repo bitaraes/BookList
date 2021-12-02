@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   search(searchFilter: string) {
     if (searchFilter == 'Todos' || !searchFilter) {
       this.books = this.allBooks;
+      this.seeAll = false;
       return;
     }
 
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
         .toLowerCase()
         .includes(searchFilter.toString().toLowerCase());
     });
+    this.seeAll = true;
   }
 
   delete(id: string) {

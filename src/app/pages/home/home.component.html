@@ -36,6 +36,8 @@
         </app-cards>
       </li>
     </ul>
-    <button *ngIf="seeAll == true">Ver todos</button>
+    <div *ngIf="seeAll == true" class="book-list__see-all">
+      <button class="see-all__button">All Books</button>
+    </div>
   </div>
 </main>

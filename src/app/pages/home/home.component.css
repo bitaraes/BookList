@@ -46,6 +46,19 @@
   background-color: #b82525;
 }
 
+.book-list__see-all {
+  display: flex;
+  justify-content: center;
+}
+
+.see-all__button {
+  width: 120px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 3em;
+}
+
 @media screen and (max-width: 765px) {
   .books-list__item {
     width: 46%;
