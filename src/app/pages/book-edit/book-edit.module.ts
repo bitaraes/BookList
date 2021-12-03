@@ -5,15 +5,8 @@ import { BookEditRoutingModule } from './book-edit-routing.module';
 import { BookEditComponent } from './book-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [
-    BookEditComponent
-  ],
-  imports: [
-    CommonModule,
-    BookEditRoutingModule,
-    ReactiveFormsModule
-  ]
+  declarations: [BookEditComponent],
+  imports: [CommonModule, BookEditRoutingModule, ReactiveFormsModule],
 })
-export class BookEditModule { }
+export class BookEditModule {}

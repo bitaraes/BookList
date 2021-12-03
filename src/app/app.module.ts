@@ -7,10 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InvalidFieldMessageComponent } from './components/invalid-field-message/invalid-field-message.component';
 
 @NgModule({
-  declarations: [AppComponent, InvalidFieldMessageComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

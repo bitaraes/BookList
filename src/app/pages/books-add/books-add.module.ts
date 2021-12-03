@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { BooksAddComponent } from './books-add.component';
 import { BooksAddRoutingModule } from './books-add.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { InvalidFieldMessageModule } from 'src/app/components/invalid-field-message/invalid-field-message.module';
 
 @NgModule({
-  declarations: [
-    BooksAddComponent
-  ],
+  declarations: [BooksAddComponent],
   imports: [
-    CommonModule, BooksAddRoutingModule, ReactiveFormsModule
+    CommonModule,
+    BooksAddRoutingModule,
+    ReactiveFormsModule,
+    InvalidFieldMessageModule,
   ],
-  exports: [BooksAddComponent]
+  exports: [BooksAddComponent],
 })
-export class BooksAddModule { }
+export class BooksAddModule {}
