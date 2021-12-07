@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BooksAddComponent } from './books-add.component';
 import { BooksAddRoutingModule } from './books-add.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InvalidFieldMessageModule } from 'src/app/components/invalid-field-message/invalid-field-message.module';
+import { SharedModule } from 'src/app/components/shared/shared.module';
 
 @NgModule({
   declarations: [BooksAddComponent],
@@ -11,7 +11,7 @@ import { InvalidFieldMessageModule } from 'src/app/components/invalid-field-mess
     CommonModule,
     BooksAddRoutingModule,
     ReactiveFormsModule,
-    InvalidFieldMessageModule,
+    SharedModule,
   ],
   exports: [BooksAddComponent],
 })

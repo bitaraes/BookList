@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
-import { InvalidFieldMessageModule } from '../components/invalid-field-message/invalid-field-message.module';
+import { SharedModule } from '../components/shared/shared.module';
 
 @NgModule({
   declarations: [AuthComponent],
-  imports: [CommonModule, AuthRoutingModule, InvalidFieldMessageModule],
+  imports: [CommonModule, AuthRoutingModule, SharedModule],
 })
 export class AuthModule {}

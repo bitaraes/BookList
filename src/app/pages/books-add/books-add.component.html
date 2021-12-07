@@ -1,59 +1,58 @@
 <h1 class="add-book__title">Add a new book</h1>
 
 <form class="add-book__form" [formGroup]="addBook">
-  <div class="add-book__input-container">
-    <input
-      type="text"
-      id="name"
-      class="add-book__input"
-      formControlName="bookName"
-      placeholder="Book Name"
-    />
-    <label for="name">Book Name</label>
-    <app-invalid-field-message
-      *ngIf="addBook.get('bookName')?.errors?.['required'] && addBook.get('bookName')?.touched"
-    ></app-invalid-field-message>
-  </div>
+  <app-input-fields
+    inputType="text"
+    inputName="BookName"
+    inputText="Book Name"
+    inputId="BookName"
+    formControlName="bookName"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="addBook.get('bookName')?.errors?.['required']
+  && addBook.get('bookName')?.touched
+  && !addBook.get('bookName')?.value"
+  ></app-invalid-field-message>
 
-  <div class="add-book__input-container">
-    <input
-      type="text"
-      id="price"
-      class="add-book__input"
-      formControlName="price"
-      placeholder="Book Price"
-    />
-    <label for="price">Book Price</label>
-    <app-invalid-field-message
-      *ngIf="addBook.get('price')?.errors?.['required'] && addBook.get('price')?.touched"
-    ></app-invalid-field-message>
-  </div>
-  <div class="add-book__input-container">
-    <input
-      type="text"
-      id="category"
-      class="add-book__input"
-      formControlName="category"
-      placeholder="Book Category"
-    />
-    <label for="category">Book Category</label>
-    <app-invalid-field-message
-      *ngIf="addBook.get('category')?.errors?.['required'] && addBook.get('category')?.touched"
-    ></app-invalid-field-message>
-  </div>
-  <div class="add-book__input-container">
-    <input
-      type="text"
-      id="author"
-      class="add-book__input"
-      formControlName="author"
-      placeholder="Book Author"
-    />
-    <label for="author">Book Author</label>
-    <app-invalid-field-message
-      *ngIf="addBook.get('author')?.errors?.['required'] && addBook.get('author')?.touched"
-    ></app-invalid-field-message>
-  </div>
+  <app-input-fields
+    inputType="text"
+    inputName="BookPrice"
+    inputText="Book Price"
+    inputId="BookPrice"
+    formControlName="price"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="addBook.get('price')?.errors?.['required']
+  && addBook.get('price')?.touched
+  && !addBook.get('price')?.value"
+  ></app-invalid-field-message>
+
+  <app-input-fields
+    inputType="text"
+    inputName="BookCategory"
+    inputText="Book Category"
+    inputId="BookCategory"
+    formControlName="category"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="addBook.get('category')?.errors?.['required']
+  && addBook.get('category')?.touched
+  && !addBook.get('category')?.value"
+  ></app-invalid-field-message>
+
+  <app-input-fields
+    inputType="text"
+    inputName="BookAuthor"
+    inputText="Book Author"
+    inputId="BookAuthor"
+    formControlName="author"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="addBook.get('author')?.errors?.['required']
+  && addBook.get('author')?.touched
+  && !addBook.get('author')?.value"
+  ></app-invalid-field-message>
+
   <div class="add-book__save">
     <button class="save__button" (click)="sendBook()">Save</button>
   </div>

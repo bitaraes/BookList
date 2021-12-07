@@ -1,0 +1,12 @@
+<div class="form-control__input-container">
+  <input
+    [value]="inputValue"
+    [type]="inputType"
+    [id]="inputId"
+    class="form-control__input"
+    [placeholder]="inputText"
+    (change)="valueChanged($event)"
+    (blur)="hasTouched()"
+  />
+  <label [for]="inputId">{{ inputText }}</label>
+</div>

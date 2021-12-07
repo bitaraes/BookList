@@ -1,26 +1,31 @@
 <h1 class="add-book__title">Register</h1>
 
 <form class="login__form" [formGroup]="registerForm">
-  <div class="login__input-container">
-    <input
-      type="text"
-      id="userName"
-      class="login__input"
-      formControlName="userName"
-      placeholder="Username"
-    />
-    <label for="userName">Username</label>
-  </div>
-  <div class="login__input-container">
-    <input
-      type="password"
-      id="password"
-      class="login__input"
-      formControlName="password"
-      placeholder="Password"
-    />
-    <label for="password">Password</label>
-  </div>
+  <app-input-fields
+    inputType="text"
+    inputName="userName"
+    inputText="User Name"
+    inputId="userName"
+    formControlName="userName"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="registerForm.get('userName')?.errors?.['required']
+&& registerForm.get('userName')?.touched
+&& !registerForm.get('userName')?.value"
+  ></app-invalid-field-message>
+  <app-input-fields
+    inputType="password"
+    inputName="password"
+    inputText="Password"
+    inputId="password"
+    formControlName="password"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="registerForm.get('password')?.errors?.['required']
+&& registerForm.get('password')?.touched
+&& !registerForm.get('password')?.value"
+  ></app-invalid-field-message>
+
   <div class="login">
     <p>
       Already have an account?

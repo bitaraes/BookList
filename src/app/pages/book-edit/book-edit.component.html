@@ -1,32 +1,58 @@
 <h1 class="add-book__title">Edit book</h1>
 
 <form class="add-book__form" [formGroup]="editBook">
-  <div class="add-book__form-input">
-    <label for="name">Book Name</label>
-    <input
-      type="text"
-      id="name"
-      class="add-book__input"
-      formControlName="bookName"
-    />
-  </div>
-  <div class="add-book__form-input">
-    <label for="price">Book Price</label>
-    <input type="text" id="price" formControlName="price" />
-  </div>
-  <div class="add-book__form-input">
-    <label for="category">Book Category</label>
-    <input
-      type="text"
-      id="category"
-      class="add-book__input"
-      formControlName="category"
-    />
-  </div>
-  <div class="add-book__form-input">
-    <label for="author">Book Author</label>
-    <input type="text" id="author" formControlName="author" />
-  </div>
+  <app-input-fields
+    inputType="text"
+    inputName="BookName"
+    inputText="Book Name"
+    inputId="BookName"
+    formControlName="bookName"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="editBook.get('bookName')?.errors?.['required']
+    && editBook.get('bookName')?.touched
+    && !editBook.get('bookName')?.value"
+  ></app-invalid-field-message>
+
+  <app-input-fields
+    inputType="text"
+    inputName="BookPrice"
+    inputText="Book Price"
+    inputId="BookPrice"
+    formControlName="price"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="editBook.get('price')?.errors?.['required']
+    && editBook.get('price')?.touched
+    && !editBook.get('price')?.value"
+  ></app-invalid-field-message>
+
+  <app-input-fields
+    inputType="text"
+    inputName="BookCategory"
+    inputText="Book Category"
+    inputId="BookCategory"
+    formControlName="category"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="editBook.get('category')?.errors?.['required']
+    && editBook.get('category')?.touched
+    && !editBook.get('category')?.value"
+  ></app-invalid-field-message>
+
+  <app-input-fields
+    inputType="text"
+    inputName="BookAuthor"
+    inputText="Book Author"
+    inputId="BookAuthor"
+    formControlName="author"
+  ></app-input-fields>
+  <app-invalid-field-message
+    *ngIf="editBook.get('author')?.errors?.['required']
+    && editBook.get('author')?.touched
+    && !editBook.get('author')?.value"
+  ></app-invalid-field-message>
+
   <div class="edit-book__save">
     <button class="save__button" (click)="edit()">Save Edition</button>
   </div>
