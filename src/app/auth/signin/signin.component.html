@@ -10,8 +10,8 @@
   ></app-input-fields>
   <app-invalid-field-message
     *ngIf="loginForm.get('userName')?.errors?.['required']
-&& loginForm.get('userName')?.touched
-&& !loginForm.get('userName')?.value"
+    && loginForm.get('userName')?.touched
+    && !loginForm.get('userName')?.value"
   ></app-invalid-field-message>
 
   <app-input-fields
@@ -23,8 +23,8 @@
   ></app-input-fields>
   <app-invalid-field-message
     *ngIf="loginForm.get('password')?.errors?.['required']
-&& loginForm.get('password')?.touched
-&& !loginForm.get('password')?.value"
+    && loginForm.get('password')?.touched
+    && !loginForm.get('password')?.value"
   ></app-invalid-field-message>
 
   <div class="login">

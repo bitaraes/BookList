@@ -22,3 +22,19 @@
   border-radius: 8px;
   margin-bottom: 3em;
 }
+
+.navbar-list {
+  border: 1px solid #666666;
+  border-bottom: 2px solid #666666;
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  height: 30px;
+  resize: none;
+  background-color: #373737;
+  margin: 15px 0 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+}

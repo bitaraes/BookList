@@ -17,6 +17,7 @@ export class BookEditComponent implements OnInit {
   bookId: string | null = this._route.snapshot.paramMap.get('id');
   bookInfo: any = { bookName: '', price: '', category: '', author: '' };
   editBook!: FormGroup;
+  editingDisabled: boolean = true;
 
   constructor(
     private _route: ActivatedRoute,
@@ -42,6 +43,9 @@ export class BookEditComponent implements OnInit {
         id: this.bookId,
       })
     );
+  }
+  enableEditing() {
+    this.editingDisabled = false;
   }
 
   edit() {

@@ -59,3 +59,7 @@ select:-webkit-autofill:focus {
   color: #fff;
   font-size: 11px;
 }
+
+.form-control__input:disabled {
+  color: #858585;
+}

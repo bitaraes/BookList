@@ -5,6 +5,7 @@
     [id]="inputId"
     class="form-control__input"
     [placeholder]="inputText"
+    [disabled]="editingEnable"
     (change)="valueChanged($event)"
     (blur)="hasTouched()"
   />

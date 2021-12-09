@@ -18,6 +18,7 @@ export class InputFieldsComponent implements ControlValueAccessor {
   @Input() inputName: string = '';
   @Input() inputText: string = '';
   @Input() inputId: string = '';
+  @Input() editingEnable: boolean = false;
 
   inputValue: string = '';
   onChange: any = (inputValue: string) => {};

@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   }
 
   search(searchFilter: string) {
-    if (searchFilter == 'Todos' || !searchFilter) {
+    if (searchFilter == 'All' || !searchFilter) {
       this.books = this.allBooks;
       this.seeAll = false;
       return;
