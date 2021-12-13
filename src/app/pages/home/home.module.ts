@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxBootstrapIconsModule, trash } from 'ngx-bootstrap-icons';
+import { SharedModule } from 'src/app/components/shared/shared.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -15,6 +16,7 @@ import { NgxBootstrapIconsModule, trash } from 'ngx-bootstrap-icons';
     CardsModule,
     HomeRoutingModule,
     NgxBootstrapIconsModule.pick({ trash }),
+    SharedModule,
   ],
   exports: [HomeComponent],
 })

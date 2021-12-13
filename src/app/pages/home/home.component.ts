@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  search(searchFilter: string) {
+  search(filter: any) {
+    const searchFilter = filter.target.value;
     if (searchFilter == 'All' || !searchFilter) {
       this.books = this.allBooks;
       this.seeAll = false;

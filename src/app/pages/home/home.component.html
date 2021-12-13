@@ -2,23 +2,10 @@
   <div class="books">
     <nav>
       <div class="navbar">
-        <select
-          class="navbar-list"
-          (change)="search(searchFilter.value)"
+        <app-category-select
+          (change)="search($event)"
           #searchFilter
-        >
-          <option class="navbar-list__item" selected="true" disabled="disabled">
-            <a href="#">Book Category</a>
-          </option>
-          <option class="navbar-list__item">All</option>
-          <option class="navbar-list__item">Fantasy</option>
-          <option class="navbar-list__item">Fiction</option>
-          <option class="navbar-list__item">History</option>
-          <option class="navbar-list__item">Novel</option>
-          <option class="navbar-list__item">Police</option>
-          <option class="navbar-list__item">Romance</option>
-          <option class="navbar-list__item">Others</option>
-        </select>
+        ></app-category-select>
       </div>
     </nav>
     <ul class="books-list">
@@ -37,7 +24,9 @@
       </li>
     </ul>
     <div *ngIf="seeAll == true" class="book-list__see-all">
-      <button class="see-all__button" (click)="search('')">All Books</button>
+      <button class="see-all__button" (click)="search($event)" value="">
+        All Books
+      </button>
     </div>
   </div>
 </main>
