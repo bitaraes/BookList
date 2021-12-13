@@ -1,0 +1,13 @@
+.submit-button__container {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 1em 1em;
+}
+
+.submit-button {
+  width: 120px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 3em;
+}

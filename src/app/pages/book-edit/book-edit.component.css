@@ -10,19 +10,6 @@
   margin: 0 auto;
 }
 
-.edit-book__save {
-  display: flex;
-  justify-content: center;
-}
-
-.save__button {
-  width: 120px;
-  height: 40px;
-  font-weight: 600;
-  border-radius: 8px;
-  margin-bottom: 3em;
-}
-
 .navbar-list {
   border: 1px solid #666666;
   border-bottom: 2px solid #666666;
@@ -37,4 +24,9 @@
   margin: 15px 0 10px 0;
   font-size: 14px;
   cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
 }

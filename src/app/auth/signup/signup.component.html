@@ -31,6 +31,9 @@
       Already have an account?
       <a routerLink="" class="login__link"> Sign in. </a>
     </p>
-    <button class="login__button" (click)="register()">Signup</button>
+    <app-submit-button
+      (click)="register()"
+      btnText="Signup"
+    ></app-submit-button>
   </div>
 </form>

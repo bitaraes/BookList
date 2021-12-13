@@ -29,7 +29,11 @@
     && !editBook.get('price')?.value"
   ></app-invalid-field-message>
 
-  <select class="navbar-list" formControlName="category">
+  <select
+    class="navbar-list"
+    formControlName="category"
+    [attr.disabled]="editingDisabled ? editingDisabled : null"
+  >
     <option
       class="navbar-list__item"
       value="null"
@@ -66,18 +70,16 @@
     && !editBook.get('author')?.value"
   ></app-invalid-field-message>
 
-  <div class="edit-book__save">
-    <button
-      class="save__button"
+  <div class="button-container">
+    <app-submit-button
+      (click)="enableEditing()"
+      btnText="Enable Editing"
+      [buttonDisabled]="!editingDisabled"
+    ></app-submit-button>
+    <app-submit-button
       (click)="edit()"
-      [disabled]="editBook.invalid || editingDisabled"
-    >
-      Save Edition
-    </button>
-  </div>
-  <div class="edit-book__edit">
-    <button class="edit__button" (click)="enableEditing()">
-      Enable Editing
-    </button>
+      btnText="Save Edition"
+      [buttonDisabled]="editBook.invalid || editingDisabled"
+    ></app-submit-button>
   </div>
 </form>

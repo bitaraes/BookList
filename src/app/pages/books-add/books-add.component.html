@@ -15,7 +15,7 @@
   ></app-invalid-field-message>
 
   <app-input-fields
-    inputType="text"
+    inputType="number"
     inputName="BookPrice"
     inputText="Book Price"
     inputId="BookPrice"
@@ -63,13 +63,10 @@
   && !addBook.get('author')?.value"
   ></app-invalid-field-message>
 
-  <div class="add-book__save">
-    <button
-      class="save__button"
+  <div class="button-container">
+    <app-submit-button
       (click)="sendBook()"
-      [disabled]="addBook.invalid"
-    >
-      Save
-    </button>
+      [buttonDisabled]="addBook.invalid"
+    ></app-submit-button>
   </div>
 </form>
