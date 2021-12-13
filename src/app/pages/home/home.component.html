@@ -2,10 +2,7 @@
   <div class="books">
     <nav>
       <div class="navbar">
-        <app-category-select
-          (change)="search($event)"
-          #searchFilter
-        ></app-category-select>
+        <app-category-select (change)="search($event)"></app-category-select>
       </div>
     </nav>
     <ul class="books-list">

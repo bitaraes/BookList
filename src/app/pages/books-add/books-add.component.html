@@ -26,24 +26,8 @@
   && addBook.get('price')?.touched
   && !addBook.get('price')?.value"
   ></app-invalid-field-message>
+  <app-category-select formControlName="category"></app-category-select>
 
-  <select class="navbar-list" formControlName="category">
-    <option
-      class="navbar-list__item"
-      value="null"
-      selected="true"
-      disabled="disabled"
-    >
-      <a href="#">Book Category</a>
-    </option>
-    <option class="navbar-list__item">Fantasy</option>
-    <option class="navbar-list__item">Fiction</option>
-    <option class="navbar-list__item">History</option>
-    <option class="navbar-list__item">Novel</option>
-    <option class="navbar-list__item">Police</option>
-    <option class="navbar-list__item">Romance</option>
-    <option class="navbar-list__item">Others</option>
-  </select>
   <app-invalid-field-message
     *ngIf="addBook.get('category')?.errors?.['required']
   && addBook.get('category')?.touched

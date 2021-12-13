@@ -12,4 +12,8 @@
   margin: 15px 0 10px 0;
   font-size: 14px;
   cursor: pointer;
+  text-transform: capitalize;
+}
+.navbar-list__item {
+  text-transform: capitalize;
 }
