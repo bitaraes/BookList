@@ -11,16 +11,13 @@ import { EmittersService } from 'src/app/services/emitters.service';
 })
 export class HeaderComponent implements OnInit, AfterContentInit {
   isLogged: boolean = false;
-  subscription!: Subscription;
   numero: number = 0;
   constructor(
     private tokenService: TokenService,
     private router: Router,
     private emitterService: EmittersService
   ) {
-    this.subscription = this.tokenService
-      .isLogged()
-      .subscribe((logged) => (this.isLogged = logged));
+    this.isLogged = this.tokenService.isLogged() ? true : false;
   }
 
   ngOnInit(): void {}

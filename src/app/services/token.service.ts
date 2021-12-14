@@ -5,18 +5,20 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class TokenService {
+  private token!: string | null;
   constructor() {}
 
   login(token: string) {
     localStorage.setItem('token', token);
   }
   logout() {
-    localStorage.removeItem('token');
+    localStorage.clear();
   }
   getToken() {
     return localStorage.getItem('token');
   }
   isLogged() {
-    return new BehaviorSubject<boolean>(!!localStorage.getItem('token'));
+    this.token = localStorage.getItem('token');
+    return this.token;
   }
 }
